@@ -1,13 +1,10 @@
-var Hello = ReactMeteor.createClass({
-    templateName: "hello",
+Template.hello.renderd = function() {
+    var vm = new Vue({
 
-    render: function() {
-        var bijin = new Domain.Bijin("bijin");
+        el: '#vue-demo',
 
-        return (
-            <div className="unko">
-                {bijin.name}
-            </div>
-        )
-    }
-});
+        data: {
+            'params': ['unko', 'hoge']
+        }
+    });
+}
